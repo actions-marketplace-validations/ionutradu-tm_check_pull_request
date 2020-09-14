@@ -1,0 +1,11 @@
+name: "Check pull request"
+description: Verify that pull request titles contains a ticket ID
+author: Ionut Radu
+branding:
+  icon: 'terminal'
+  color: 'gray-dark'
+runs:
+  using:  "composite"
+  steps:
+    - run: ${{ github.action_path }}/check_pr.sh
+      shell: bash
