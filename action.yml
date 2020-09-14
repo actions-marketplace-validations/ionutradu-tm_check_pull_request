@@ -7,5 +7,6 @@ branding:
 runs:
   using:  "composite"
   steps:
+    - uses: actions/checkout@v2
     - run: ${{ github.action_path }}/check_pr.sh
       shell: bash
